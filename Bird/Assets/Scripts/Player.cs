@@ -40,10 +40,12 @@ public class Player : MonoBehaviour
     {
         anim.SetBool("isDead", true);
         isDead = true;
+        rb2D.simulated = false;
 
         yield return new WaitForSeconds(1.0f);
 
         anim.SetBool("isDead", false);
         isDead = false;
+        rb2D.simulated = true;
     }
 }
